@@ -3,13 +3,14 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     container: {
-        width: 104,
-        height: 120,
-        justifyContent: 'center',
+        flex:1,
         alignItems: 'center',
-        borderRadius: 8,
-        marginRight: 8,
+        paddingTop: 24,
+
     },
+    guilds: {
+        width: '100%',
+    }
 
 
 
