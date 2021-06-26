@@ -26,6 +26,7 @@ export default function App() {
         barStyle="light-content"
         backgroundColor="transparent"
         translucent />
+        
       <AuthProvider>
         <Routes />
       </AuthProvider>

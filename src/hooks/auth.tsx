@@ -8,7 +8,7 @@ import {
     RESPONSE_TYPE,
     CLIENT_ID,
     CDN_IMAGE,
-} from '../config';
+} from '../configs';
 import { api } from '../services/api';
 
 type User = {
@@ -43,7 +43,7 @@ function AuthProvider({ children }: AuthProviderProps) {
             
 
             const response = AuthSession.startAsync({ authUrl });
-            console.log(response)
+            console.log(response);
         } catch {
             throw new Error('Não foi possível autenticar');
         }

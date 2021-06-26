@@ -13,12 +13,11 @@ import { useAuth } from '../../hooks/auth';
 
 
 export function SignIn() {
-
   const { user, signIn } = useAuth();
   async function handleSignIn() {
     try {
       await signIn();
-    }catch (error) {
+    } catch (error) {
       Alert.alert(error)
     }
   }
