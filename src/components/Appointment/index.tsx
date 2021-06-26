@@ -7,7 +7,8 @@ import CalendarSvg from '../../assets/calendar.svg';
 import { theme } from '../../global/styles/theme';
 import { GuildIcon } from '../GuildIcon';
 import { GuildProps } from '../Guild';
-import LinearGradient from 'react-native-linear-gradient';
+import { LinearGradient } from 'expo-linear-gradient';
+/* import LinearGradient from 'react-native-linear-gradient'; */
 import { categories } from '../../utils/categories';
 
 
