@@ -7,6 +7,7 @@ import { Routes } from './src/routes';
 import { SignIn } from './src/screens/SignIn';
 import { StatusBar } from 'react-native';
 import { Background } from './src/components/Background';
+import { AuthProvider } from './src/hooks/auth';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,7 +26,10 @@ export default function App() {
         barStyle="light-content"
         backgroundColor="transparent"
         translucent />
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+
     </Background>
   )
 }

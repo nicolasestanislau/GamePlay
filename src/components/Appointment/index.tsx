@@ -6,15 +6,10 @@ import PlayerSvg from '../../assets/player.svg';
 import CalendarSvg from '../../assets/calendar.svg';
 import { theme } from '../../global/styles/theme';
 import { GuildIcon } from '../GuildIcon';
+import { GuildProps } from '../Guild';
+import LinearGradient from 'react-native-linear-gradient';
 import { categories } from '../../utils/categories';
 
-export type GuildProps = {
-    id: string,
-    name: string,
-    icon: null,
-    owner: boolean,
-
-}
 
 export type AppointmentProps = {
     id: string;
@@ -34,12 +29,16 @@ export function Appointment({ data, ...rest }: Props) {
 
     const { owner } = data.guild;
 
-    const { primary, on } = theme.colors;
+    const { primary, on, secondary70, secondary50 } = theme.colors;
 
     return (
         <RectButton {...rest} >
             <View style={styles.container}>
-                <GuildIcon />
+                <LinearGradient style={styles.guildIconContainer}
+                colors={[secondary70, secondary50]}>
+                    <GuildIcon />
+                </LinearGradient>
+
                 <View style={styles.content}>
                     <View style={styles.header}>
                         <Text style={styles.title}>
